@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart — GOAT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <div class="note-bar">
+    <div class="note-bar-inner">
+      <div class="note-group">
+        <span class="note-item">Free shipping over $150</span>
+        <span class="note-divider"></span>
+        <span class="note-item">Authenticity guaranteed</span>
+      </div>
+      <div class="note-group">
+        <a href="#" class="note-link">Help</a>
+        <span class="note-divider"></span>
+        <a href="#" class="note-link">Track order</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="center-divider-row">
+    <div class="center-divider-inner">
+      <div class="divider-line"></div>
+      <a href="../index.html" class="logo-link">
+        <img src="../img/Gemini_Generated_Image_jregpmjregpmjreg-removebg-preview.png" alt="GOAT" class="center-logo-img">
+      </a>
+      <div class="divider-line"></div>
+    </div>
+  </div>
+
+  <main class="main-wrapper">
+
+    <div class="page-top-header">
+      <div class="cart-title-wrap">
+        <h1 class="page-title">YOUR CART</h1>
+        <span class="items-count-badge" id="itemsCountBadge">2 items</span>
+      </div>
+
+      <nav class="nav-actions">
+        <a href="../index.html" class="nav-btn">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+          <span>Home</span>
+        </a>
+
+        <a href="./cart.html" class="nav-btn active">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="8" cy="21" r="1"/>
+            <circle cx="19" cy="21" r="1"/>
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+          </svg>
+          <span>Cart</span>
+          <span class="red-badge" id="navCartBadge">2</span>
+        </a>
+
+        <a href="../Account/account.html" class="nav-btn">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+          <span>Account</span>
+        </a>
+
+        <a href="../owner/owner.html" class="nav-btn owner-nav-btn" id="ownerNavBtn" style="border-color: #92400e; color: #fbbf24; display: none;">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+          <span>Owner</span>
+        </a>
+      </nav>
+    </div>
+
+    <div class="content-columns">
+
+      <section class="left-column">
+
+        <div class="stepper-bar">
+          <div class="stepper-track"></div>
+
+          <div class="step-item step-active">
+            <span class="step-circle red-circle">1</span>
+            <span class="step-text">Cart</span>
+          </div>
+
+          <a href="../pyment/payment.html" class="step-item step-pending">
+            <span class="step-circle gray-circle">2</span>
+            <span class="step-text">Payment</span>
+          </a>
+
+          <a href="../receipt/receipt.html" class="step-item step-pending">
+            <span class="step-circle gray-circle">3</span>
+            <span class="step-text">Receipt</span>
+          </a>
+        </div>
+
+        <div class="cart-items-list" id="cartItemsList">
+
+          <div class="cart-item-card" data-item-id="rm-shirt-2026">
+            <div class="item-left-wrap">
+              <div class="item-thumbnail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/>
+                </svg>
+              </div>
+              <div class="item-details">
+                <h3 class="item-title">Real Madrid 2026 Home Shirt</h3>
+                <span class="item-meta">Size M · White</span>
+                <div class="qty-controller">
+                  <button type="button" class="qty-btn btn-qty-minus" aria-label="Decrease quantity">−</button>
+                  <span class="qty-value">1</span>
+                  <button type="button" class="qty-btn btn-qty-plus" aria-label="Increase quantity">+</button>
+                </div>
+              </div>
+            </div>
+            <div class="item-right-wrap">
+              <span class="item-price">LE 660.00</span>
+              <button type="button" class="btn-remove-item">Remove</button>
+            </div>
+          </div>
+
+          <div class="cart-item-card" data-item-id="tr-shorts-navy">
+            <div class="item-left-wrap">
+              <div class="item-thumbnail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16v3l-2 11-4-1-2-4-2 4-4 1L4 7V4z"/>
+                </svg>
+              </div>
+              <div class="item-details">
+                <h3 class="item-title">Training Shorts — Navy</h3>
+                <span class="item-meta">Size M · Navy</span>
+                <div class="qty-controller">
+                  <button type="button" class="qty-btn btn-qty-minus" aria-label="Decrease quantity">−</button>
+                  <span class="qty-value">1</span>
+                  <button type="button" class="qty-btn btn-qty-plus" aria-label="Increase quantity">+</button>
+                </div>
+              </div>
+            </div>
+            <div class="item-right-wrap">
+              <span class="item-price">LE 90.00</span>
+              <button type="button" class="btn-remove-item">Remove</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="empty-cart-state" id="emptyCartState">
+          <svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="8" cy="21" r="1"/>
+            <circle cx="19" cy="21" r="1"/>
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+          </svg>
+          <h3 class="empty-title">Your cart is empty</h3>
+          <p class="empty-sub">Looks like you haven't added anything to your cart yet.</p>
+          <a href="../index.html" class="btn-shop-now">Start Shopping</a>
+        </div>
+
+        <a href="../index.html" class="continue-shopping-link">
+          &larr; Continue shopping
+        </a>
+
+        <div class="trust-grid">
+          <div class="trust-card">
+            <h4 class="trust-title">Secure payment</h4>
+            <p class="trust-desc">Your card details are encrypted end to end.</p>
+          </div>
+          <div class="trust-card">
+            <h4 class="trust-title">Authenticity guaranteed</h4>
+            <p class="trust-desc">Every item is checked before it ships.</p>
+          </div>
+          <div class="trust-card">
+            <h4 class="trust-title">Free shipping over $150</h4>
+            <p class="trust-desc">Fast delivery on larger orders.</p>
+          </div>
+        </div>
+
+      </section>
+
+      <aside class="right-column">
+        <div class="summary-card">
+          <h2 class="summary-title">ORDER SUMMARY</h2>
+
+          <div class="promo-box">
+            <div class="promo-input-wrap">
+              <input type="text" id="promoInput" class="promo-input" placeholder="Promo code" autocomplete="off">
+            </div>
+            <button type="button" class="btn-promo-apply" id="btnPromoApply">Apply</button>
+          </div>
+          <p class="promo-msg" id="promoMsg"></p>
+
+          <div class="calc-lines-wrap">
+            <div class="calc-line">
+              <span>Subtotal</span>
+              <span class="calc-val" id="subtotalEl">LE 750.00</span>
+            </div>
+            <div class="calc-line discount-line" id="discountRow">
+              <span id="discountLabel">Discount</span>
+              <span class="calc-val" id="discountEl">-LE 0.00</span>
+            </div>
+            <div class="calc-line">
+              <span>Tax</span>
+              <span class="calc-val" id="taxEl">LE 50.00</span>
+            </div>
+          </div>
+
+          <div class="total-divider"></div>
+
+          <div class="order-total-row">
+            <span class="total-label">Order Total</span>
+            <span class="total-amount" id="orderTotalEl">LE 800.00</span>
+          </div>
+
+          <div class="pickup-card">
+            <div class="pickup-cell">
+              <span class="pickup-heading">Pickup</span>
+              <span class="pickup-sub">Collect from the store</span>
+            </div>
+            <div class="pickup-cell">
+              <span class="pickup-heading">Ready in</span>
+              <span class="pickup-sub">Within 24 hours</span>
+            </div>
+          </div>
+
+          <a href="../pyment/payment.html" class="btn-proceed-payment" id="btnProceed">
+            Proceed to payment
+          </a>
+
+          <p class="promo-hint" id="promoHint">
+            Try the code <code>GOAT10</code>
+          </p>
+
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <script src="../js/products-data.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

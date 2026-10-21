@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account &mdash; GOAT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <div class="note-bar">
+    <div class="note-bar-inner">
+      <div class="note-group">
+        <span class="note-item">Free shipping over $150</span>
+        <span class="note-divider"></span>
+        <span class="note-item">Authenticity guaranteed</span>
+      </div>
+      <div class="note-group">
+        <a href="#" class="note-link" id="helpLink">Help</a>
+        <span class="note-divider"></span>
+        <a href="#" class="note-link" id="trackLink">Track order</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="center-divider-row">
+    <div class="center-divider-inner">
+      <div class="divider-line"></div>
+      <a href="../index.html" class="logo-link">
+        <img src="../img/Gemini_Generated_Image_jregpmjregpmjreg-removebg-preview.png" alt="GOAT" class="center-logo-img">
+      </a>
+      <div class="divider-line"></div>
+    </div>
+  </div>
+
+  <main class="main-wrapper">
+
+    <div class="page-top-header">
+      <div class="account-title-wrap">
+        <h1 class="page-title">ACCOUNT</h1>
+        <span class="member-badge">Member</span>
+      </div>
+
+      <nav class="nav-actions">
+        <a href="../index.html" class="nav-btn">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+          <span>Home</span>
+        </a>
+
+        <a href="../cart/cart.html" class="nav-btn">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="8" cy="21" r="1"/>
+            <circle cx="19" cy="21" r="1"/>
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+          </svg>
+          <span>Cart</span>
+        </a>
+
+        <a href="./account.html" class="nav-btn active">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+          <span>Account</span>
+        </a>
+
+        <a href="../owner/owner.html" class="nav-btn owner-nav-btn" id="ownerNavBtn" style="border-color: #92400e; color: #fbbf24; display: none;">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+          <span>Owner</span>
+        </a>
+      </nav>
+    </div>
+
+    <div class="content-columns">
+
+      <section class="left-column">
+
+        <div class="welcome-card">
+          <div class="avatar-circle">
+            <svg class="avatar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+          <div class="welcome-details">
+            <h2 class="welcome-heading">WELCOME BACK</h2>
+            <p class="welcome-subtext">Manage your orders, details and saved info.</p>
+          </div>
+        </div>
+
+        <div class="account-tabs">
+          <button type="button" class="tab-pill" data-tab="orders">Orders</button>
+          <button type="button" class="tab-pill active" data-tab="profile">Profile</button>
+          <button type="button" class="tab-pill" data-tab="saved">Saved</button>
+        </div>
+
+        <div class="tabs-container">
+
+          <div class="tab-content" id="tab-orders">
+            <div class="order-box">
+              <div class="order-header-row">
+                <div class="order-number-meta">
+                  <span class="order-code">Order 01074473660</span>
+                  <span class="order-timestamp">Placed 2026/10/14</span>
+                </div>
+                <span class="pickup-status-badge">Ready for pickup</span>
+              </div>
+
+              <div class="order-items-group">
+
+                <div class="order-product-row">
+                  <div class="product-icon-wrap">
+                    <svg class="product-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/>
+                    </svg>
+                  </div>
+                  <div class="product-text-meta">
+                    <div class="product-name">Real Madrid 2026 Home Shirt</div>
+                    <div class="product-variant">Size M · Qty 1</div>
+                  </div>
+                  <div class="product-price">LE 660.00</div>
+                </div>
+
+                <div class="order-product-row">
+                  <div class="product-icon-wrap">
+                    <svg class="product-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4 4h16v3l-2 11-4-1-2-4-2 4-4 1L4 7V4z"/>
+                    </svg>
+                  </div>
+                  <div class="product-text-meta">
+                    <div class="product-name">Training Shorts — Navy</div>
+                    <div class="product-variant">Size M · Qty 1</div>
+                  </div>
+                  <div class="product-price">LE 90.00</div>
+                </div>
+              </div>
+
+              <div class="order-footer-row">
+                <span class="order-total-amount">Total LE 800.00</span>
+                <a href="../receipt/receipt.html" class="order-receipt-link">View receipt</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content active" id="tab-profile">
+            <form class="profile-card-form" id="profileForm" autocomplete="off">
+
+              <div class="input-block">
+                <label for="fullName" class="field-label">Full Name</label>
+                <input type="text" id="fullName" class="text-input" placeholder="Your full name" value="Karim Mostafa">
+              </div>
+
+              <div class="input-block">
+                <label for="profileEmail" class="field-label">Email</label>
+                <input type="email" id="profileEmail" class="text-input" placeholder="you@example.com" value="you@example.com">
+              </div>
+
+              <div class="input-flex-row">
+                <div class="input-block flex-grow-phone">
+                  <label for="profilePhone" class="field-label">Phone</label>
+                  <input type="tel" id="profilePhone" class="text-input" placeholder="+20 000 000 0000" value="+20 000 000 0000">
+                </div>
+                <div class="input-block flex-grow-size">
+                  <label for="preferredSize" class="field-label">Preferred Size</label>
+                  <input type="text" id="preferredSize" class="text-input" placeholder="M" value="M">
+                </div>
+              </div>
+
+              <div class="form-action-area">
+                <button type="submit" class="btn-save-action" id="btnSaveProfile">Save changes</button>
+              </div>
+
+              <div class="save-status-msg" id="saveStatusFeedback">
+                <span>Changes saved ✓</span>
+              </div>
+            </form>
+          </div>
+
+          <div class="tab-content" id="tab-saved">
+            <div class="saved-options-list">
+              <button type="button" class="action-outline-card" id="btnActionCard">
+                <span class="action-plus">+</span>
+                <span>Add a payment card</span>
+              </button>
+
+              <button type="button" class="action-outline-card" id="btnActionStore">
+                <span class="action-plus">+</span>
+                <span>Add a pickup store</span>
+              </button>
+
+              <button type="button" class="action-outline-card" id="btnActionWishlist">
+                <span class="action-plus">+</span>
+                <span>Add to wishlist</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="trust-row">
+          <div class="trust-box">
+            <h4 class="trust-heading">Secure payment</h4>
+            <p class="trust-para">Your card details are encrypted end to end.</p>
+          </div>
+          <div class="trust-box">
+            <h4 class="trust-heading">Authenticity guaranteed</h4>
+            <p class="trust-para">Every item is checked before it ships.</p>
+          </div>
+          <div class="trust-box">
+            <h4 class="trust-heading">Free shipping over $150</h4>
+            <p class="trust-para">Fast delivery on larger orders.</p>
+          </div>
+        </div>
+
+      </section>
+
+      <aside class="right-column">
+        <div class="activity-panel">
+          <h3 class="activity-title">MY ACTIVITY</h3>
+
+          <div class="activity-stats-row">
+            <div class="stat-card">
+              <span class="stat-label">Orders</span>
+              <span class="stat-digit">1</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Items</span>
+              <span class="stat-digit">2</span>
+            </div>
+          </div>
+
+          <div class="stat-card total-spent-card">
+            <span class="stat-label">Total spent</span>
+            <span class="total-spent-val">LE 800.00</span>
+          </div>
+
+          <div class="activity-links-row">
+            <div class="activity-subcard" id="pickupSubcard">
+              <h5 class="subcard-title">Pickup</h5>
+              <p class="subcard-desc">Collect from the store</p>
+            </div>
+            <div class="activity-subcard" id="supportSubcard">
+              <h5 class="subcard-title">Support</h5>
+              <p class="subcard-desc">Help is one tap away</p>
+            </div>
+          </div>
+
+          <div class="activity-actions">
+            <button type="button" class="btn-signout" id="btnSignOut">Sign out</button>
+            <a href="../index.html" class="btn-continue-shopping">Continue shopping</a>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <div class="modal-overlay" id="interactiveModal">
+    <div class="modal-window">
+      <button type="button" class="modal-close" id="modalCloseBtn">&times;</button>
+      <div class="modal-icon-header">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+      </div>
+      <h3 class="modal-heading" id="modalTitle">Notification</h3>
+      <p class="modal-description" id="modalDesc">Details will appear here.</p>
+      <div class="modal-btn-row">
+        <button type="button" class="modal-btn-primary" id="modalConfirmBtn">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../user-credentials.js"></script>
+  <script src="../js/products-data.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

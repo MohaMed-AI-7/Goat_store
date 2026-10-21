@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOAT OWNER — Store Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./owner.css?v=2">
+</head>
+<body>
+
+  <header class="owner-navbar">
+    <div class="brand-section">
+      <a href="../index.html" class="brand-logo" title="GOAT Store">
+        <img src="../img/Gemini_Generated_Image_jregpmjregpmjreg-removebg-preview.png" alt="GOAT" class="owner-nav-logo">
+      </a>
+      <span class="owner-pill">OWNER</span>
+    </div>
+
+    <div class="nav-actions">
+      <a href="../index.html" class="view-store-link" target="_blank" title="View customer storefront">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+          <polyline points="15 3 21 3 21 9"/>
+          <line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
+        <span>View Store</span>
+      </a>
+
+      <div class="owner-profile">
+        <span class="owner-name" id="ownerNameEl">Store Owner</span>
+        <div class="owner-avatar" id="ownerAvatarEl">O</div>
+      </div>
+
+      <button class="btn-logout" id="btnLogout" title="Log out from owner dashboard">Log out</button>
+    </div>
+  </header>
+
+  <main class="dashboard-container">
+
+    <div class="dashboard-header">
+      <div>
+        <h1 class="dashboard-title">ALL PRODUCTS</h1>
+        <p class="dashboard-subtitle">Manage everything that shows in your store.</p>
+      </div>
+
+      <button class="btn-add-item" id="btnAddNewItem">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+        <span>+ Add new item</span>
+      </button>
+    </div>
+
+    <section class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-label">Total items</div>
+        <div class="stat-value" id="totalItemsEl">7</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-label">Low stock</div>
+        <div class="stat-value" id="lowStockEl">2</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-label">Out of stock</div>
+        <div class="stat-value" id="outOfStockEl">1</div>
+      </div>
+    </section>
+
+    <div class="controls-bar">
+      <div class="search-wrapper">
+        <svg class="search-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" class="search-input" id="searchInput" placeholder="Search by item name...">
+      </div>
+
+      <div class="category-select-wrapper">
+        <select class="category-select" id="categorySelect">
+          <option value="all">All categories</option>
+          <option value="Club Shirts">Club Shirts</option>
+          <option value="Sneakers">Sneakers</option>
+          <option value="Shorts">Shorts</option>
+          <option value="Bags">Bags</option>
+          <option value="Tracksuits">Tracksuits</option>
+          <option value="Football Shoes">Football Shoes</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="table-card">
+      <table class="products-table">
+        <thead>
+          <tr>
+            <th style="width: 35%;">Item</th>
+            <th style="width: 18%;">Category</th>
+            <th style="width: 15%;">Price</th>
+            <th style="width: 10%;">Stock</th>
+            <th style="width: 12%;">Status</th>
+            <th style="width: 10%;">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="productsTableBody">
+
+        </tbody>
+      </table>
+
+      <div class="empty-table-state" id="emptyStateEl" style="display: none;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+          <line x1="8" y1="21" x2="16" y2="21"></line>
+          <line x1="12" y1="17" x2="12" y2="21"></line>
+        </svg>
+        <h3>No products found</h3>
+        <p>No products match your search or filter criteria.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <div class="modal-overlay" id="productModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modalTitle">Add New Product</h2>
+        <button class="btn-close-modal" id="btnCloseModal">&times;</button>
+      </div>
+
+      <form id="productForm">
+        <div class="modal-body">
+          <input type="hidden" id="inputProductId">
+
+          <div class="form-group">
+            <label class="form-label" for="inputProductName">Product Name *</label>
+            <input type="text" class="form-input" id="inputProductName" placeholder="e.g. Real Madrid 2026 Home Shirt" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="selectCategory">Category *</label>
+              <select class="form-select" id="selectCategory" required>
+                <option value="Club Shirts">Club Shirts</option>
+                <option value="Sneakers">Sneakers</option>
+                <option value="Shorts">Shorts</option>
+                <option value="Bags">Bags</option>
+                <option value="Tracksuits">Tracksuits</option>
+                <option value="Football Shoes">Football Shoes</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="selectBrand">Brand *</label>
+              <select class="form-select" id="selectBrand" required>
+                <option value="Nike">Nike</option>
+                <option value="Adidas">Adidas</option>
+                <option value="Puma">Puma</option>
+                <option value="New Balance">New Balance</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="inputPrice">Price (LE) *</label>
+              <input type="number" step="0.01" min="0" class="form-input" id="inputPrice" placeholder="660.00" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="inputStock">Stock Units *</label>
+              <input type="number" min="0" class="form-input" id="inputStock" placeholder="10" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="selectBadge">Badge / Tag</label>
+              <select class="form-select" id="selectBadge">
+                <option value="">None</option>
+                <option value="NEW">NEW</option>
+                <option value="SALE">SALE</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="selectIconType">Wireframe Visual Icon</label>
+              <select class="form-select" id="selectIconType">
+                <option value="jersey">Jersey (Club Shirt)</option>
+                <option value="jersey-v">Jersey V-Neck</option>
+                <option value="shirt">Compression Shirt / Tracksuit</option>
+                <option value="boots">Football Shoes / Boots</option>
+                <option value="backpack">Backpack / Bag</option>
+                <option value="shorts">Athletic Shorts</option>
+                <option value="sneakers">Sneakers</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Available Sizes</label>
+            <div class="sizes-container">
+              <label class="size-pill-label">
+                <input type="checkbox" name="sizes" value="S">
+                <span class="size-pill">S</span>
+              </label>
+              <label class="size-pill-label">
+                <input type="checkbox" name="sizes" value="M" checked>
+                <span class="size-pill">M</span>
+              </label>
+              <label class="size-pill-label">
+                <input type="checkbox" name="sizes" value="L">
+                <span class="size-pill">L</span>
+              </label>
+              <label class="size-pill-label">
+                <input type="checkbox" name="sizes" value="XL">
+                <span class="size-pill">XL</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Product Image</label>
+
+            <div class="image-uploader-card">
+
+              <input type="file" id="inputImageFile" accept="image/*" style="display: none;">
+
+              <div class="upload-drop-zone" id="uploadDropZone" role="button" tabindex="0">
+
+                <div class="drop-zone-empty" id="dropZoneEmpty">
+                  <div class="upload-icon-circle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                      <polyline points="17 8 12 3 7 8"/>
+                      <line x1="12" y1="3" x2="12" y2="15"/>
+                    </svg>
+                  </div>
+                  <div class="upload-text-group">
+                    <span class="upload-main-text">Click to choose image from your device</span>
+                    <span class="upload-sub-text">or drag and drop here (JPG, PNG, WEBP, GIF)</span>
+                  </div>
+                  <button type="button" class="btn-browse-file" id="btnBrowseFile">
+                    <span>Upload Image</span>
+                  </button>
+                </div>
+
+                <div class="drop-zone-preview" id="dropZonePreview" style="display: none;">
+                  <img id="imagePreviewEl" src="" alt="Product Preview" class="preview-img">
+                  <div class="preview-info-col">
+                    <span class="preview-filename" id="previewFileName">custom-image.png</span>
+                    <span class="preview-filesize" id="previewFileSize">Image loaded</span>
+                    <div class="preview-btn-row">
+                      <button type="button" class="btn-preview-action change" id="btnChangeImage">Change</button>
+                      <button type="button" class="btn-preview-action remove" id="btnRemoveImage">&times; Remove</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="alt-url-wrapper">
+                <span class="alt-url-label">Or paste image URL (Optional):</span>
+                <input type="url" class="form-input" id="inputImageUrl" placeholder="https://example.com/item.png or leave empty for wireframe icon">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="inputDescription">Description (Optional)</label>
+            <textarea class="form-textarea" id="inputDescription" placeholder="Enter short details about this item..."></textarea>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-modal-cancel" id="btnCancelModal">Cancel</button>
+          <button type="submit" class="btn-modal-save">Save Product</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+   <script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+  import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCD3rvBDoqS14S58vubkKJfskIIzO9hhq8",
+    authDomain: "goat-store-5b4d5.firebaseapp.com",
+    databaseURL: "https://goat-store-5b4d5-default-rtdb.firebaseio.com",
+    projectId: "goat-store-5b4d5",
+    storageBucket: "goat-store-5b4d5.firebasestorage.app",
+    messagingSenderId: "885035852209",
+    appId: "1:885035852209:web:974f845437c3982fa91d90",
+    measurementId: "G-QDXPY58SBZ"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+  const storage = getStorage(app);
+
+  async function addProduct() {
+    const productName = document.getElementById("productName").value;
+    const productPrice = document.getElementById("productPrice").value;
+    const imageFile = document.getElementById("productImage").files[0];
+
+    if (!imageFile) {
+      alert("من فضلك اختر صورة للمنتج أولاً!");
+      return;
+    }
+    if (!productName || !productPrice) {
+      alert("من فضلك اكتب اسم وسعر المنتج!");
+      return;
+    }
+
+    try {
+      alert("جاري رفع المنتج... يرجى الانتظار");
+
+      const storageRef = ref(storage, 'products/' + imageFile.name);
+      await uploadBytes(storageRef, imageFile);
+
+      const imageUrl = await getDownloadURL(storageRef);
+
+      await addDoc(collection(db, "products"), {
+        name: productName,
+        price: productPrice,
+        image: imageUrl
+      });
+
+      alert("تم إضافة المنتج بنجاح!");
+    } catch (error) {
+      console.error("حدث خطأ أثناء الإضافة: ", error);
+      alert("حصل خطأ، راجع الـ Console لمعرفة السبب.");
+    }
+  }
+
+  document.getElementById("addButton").addEventListener("click", addProduct);
+</script>
+
+  <script src="../owner-credentials.js"></script>
+  <script src="../js/products-data.js"></script>
+  <script src="./owner.js?v=2"></script>
+</body>
+</html>

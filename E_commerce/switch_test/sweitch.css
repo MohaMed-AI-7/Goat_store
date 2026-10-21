@@ -1,0 +1,98 @@
+body {
+    margin: 20px;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 8px;
+
+    background: #669999;
+}
+.back{
+    grid-area:1/1/2/2;
+
+}
+.back-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #00ffcc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.switch {
+    grid-area:1/2/2/10;
+    position: relative;
+    height: 60px;
+    display: flex;
+    gap: 10px;
+    top:5;
+    padding: 5px;
+    color:white;
+    background: #00ffcc;
+    border-radius: 50px;
+}
+
+.switch button {
+    width: 400px;
+    height: 60px;
+
+    border: none;
+    background: transparent;
+
+    color: #000;
+    cursor: pointer;
+
+    border-radius: 100px;
+}
+.back-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: radial-gradient(circle 80px at var(--x, 50%) var(--y, 50%),
+      rgba(138, 138, 138, 0.25),
+
+      transparent 80%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.back-icon:hover {
+  color: #ffffff;
+
+  border-color: #9a9a9a;
+
+}
+
+.back-icon:hover::before {
+  opacity: 1;
+
+}
+.slider {
+    position: absolute;
+    margin:3px;
+    left: 1px;
+
+    width: 380px;
+    height: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: black;
+    color: white;
+
+    border-radius: 50px;
+
+    transition: left 0.5s ease;
+
+    pointer-events: none;
+}

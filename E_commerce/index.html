@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOAT &mdash; Official Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+
+  <header>
+    <div class="note_bar">
+      <div class="util-bar">
+        <div class="divider-group">
+          <span class="divider-text">Free shipping over $150</span>
+          <span class="divider-text">Authenticity guaranteed</span>
+        </div>
+        <div class="divider-group">
+          <span class="divider-text"><a href="./login/login.html">Sign In</a></span>
+          <span class="divider-text"><a href="#">Help</a></span>
+          <span class="divider-text"><a href="#">Track order</a></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="header_basic">
+      <div class="frist_elements">
+        <a href="./index.html" class="logo">
+          <img src="./img/Gemini_Generated_Image_jregpmjregpmjreg-removebg-preview.png" alt="GOAT Logo" class="logo-img">
+        </a>
+
+        <div class="search-box">
+          <input class="search-input" type="search" placeholder="Search sneakers, shirts, gear...">
+          <img src="./icon/magnifying-glass-solid.png" alt="Search" class="search-icon">
+        </div>
+
+        <div class="account-cart">
+
+          <a href="./Account/account.html">
+            <span class="account-cart_2">
+              <img src="./icon/user-regular.png" alt="Account">
+              <span>Account</span>
+            </span>
+          </a>
+
+          <a href="./cart/cart.html" class="cart-link-wrap">
+            <span class="account-cart_2">
+              <img src="./icon/cart-shopping-solid.png" alt="Cart">
+              <span>Cart</span>
+            </span>
+            <span class="cart-counter-badge" id="navCartBadge">2</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="second_elements">
+        <button type="button" class="active">All Items</button>
+        <button type="button">Club Shirts</button>
+        <button type="button">Sneakers</button>
+        <button type="button">Shorts</button>
+        <button type="button">Bags</button>
+        <button type="button">Tracksuits</button>
+        <button type="button">Football Shoes</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="shop-container">
+
+    <aside class="sidebar-filters">
+      <div class="filter-widget">
+        <h2 class="filter-title">FILTERS</h2>
+
+        <div class="filter-group">
+          <h3 class="group-title">Brand</h3>
+          <div class="options-container">
+            <label class="checkbox-label"><input type="checkbox" name="brand" value="Nike"> Nike</label>
+            <label class="checkbox-label"><input type="checkbox" name="brand" value="Adidas"> Adidas</label>
+            <label class="checkbox-label"><input type="checkbox" name="brand" value="Puma"> Puma</label>
+            <label class="checkbox-label"><input type="checkbox" name="brand" value="New Balance"> New Balance</label>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h3 class="group-title">Size</h3>
+          <div class="options-container">
+            <label class="checkbox-label"><input type="checkbox" name="size" value="S"> S</label>
+            <label class="checkbox-label"><input type="checkbox" name="size" value="M"> M</label>
+            <label class="checkbox-label"><input type="checkbox" name="size" value="L"> L</label>
+            <label class="checkbox-label"><input type="checkbox" name="size" value="XL"> XL</label>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h3 class="group-title">Price</h3>
+          <div class="options-container">
+            <label class="checkbox-label"><input type="checkbox" name="price" value="Under LE 500"> Under LE 500</label>
+            <label class="checkbox-label"><input type="checkbox" name="price" value="LE 500 – 1000"> LE 500 &ndash; 1000</label>
+            <label class="checkbox-label"><input type="checkbox" name="price" value="LE 1000+"> LE 1000+</label>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="products-section">
+      <div class="products-header">
+        <h2 class="category-heading" id="categoryHeading">ALL PRODUCTS</h2>
+        <span class="products-count" id="productsCountEl">7 items</span>
+      </div>
+
+      <div class="products-grid">
+
+      </div>
+    </main>
+  </div>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="./js/products-data.js"></script>
+  <script src="./js/store-app.js"></script>
+</body>
+</html>
